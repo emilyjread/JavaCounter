@@ -1,4 +1,4 @@
-package com.example.counter;
+package com.example.counter.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -52,7 +52,7 @@ public class MainController {
 	@RequestMapping("/reset")
 	
 	public String reset(HttpSession session) {
-		session.setAttribute("count", 0);
+		session.invalidate();
 		return "redirect:";
 		
 	}
